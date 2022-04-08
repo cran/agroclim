@@ -31,10 +31,12 @@ Arguments lon and lat define the coordinates that must be in the same projection
 \examples{
 
 \donttest{
- dataFromGrid(grid = "../data/tmax.nc",
+try(
+ dataFromGrid(grid = "tmax.nc",
                  varname = 'tn',
                  lon = c(41.39, 42),
                  lat = c(2.17, 2.5),
                  times = FALSE)
+)
 }
 }

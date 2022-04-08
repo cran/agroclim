@@ -4,8 +4,17 @@
 \alias{createNc}
 \title{Creation of NetCDF from an array}
 \usage{
-createNc(arr, varunit, varname, longname, lons, lats, inidate = NULL,
-  scale = NULL, out)
+createNc(
+  arr,
+  varunit,
+  varname,
+  longname,
+  lons,
+  lats,
+  inidate = NULL,
+  scale = NULL,
+  out
+)
 }
 \arguments{
 \item{arr}{array containing the values to export in netcdf.}
@@ -35,6 +44,7 @@ Creates a NetCDF file from an array with values.
 \examples{
 
 \donttest{
+try(
 createNc(arr = hi,
           varunit = 'ºC',
           varname = 'hi',
@@ -44,6 +54,7 @@ createNc(arr = hi,
           inidate = '1980-01-01',
           scale = 'years',
           out = 'hi.nc')
+ )
  }
 
 }

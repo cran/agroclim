@@ -15,11 +15,13 @@
 #' @examples
 #'
 #'\donttest{
-#'  dataFromGrid(grid = "../data/tmax.nc",
+#'try(
+#'  dataFromGrid(grid = "tmax.nc",
 #'                  varname = 'tn',
 #'                  lon = c(41.39, 42),
 #'                  lat = c(2.17, 2.5),
 #'                  times = FALSE)
+#')
 #'}
 #' @import ncdf4
 #' @import easyNCDF
@@ -109,7 +111,7 @@ dataFromGrid <- function(grid, varname, lon, lat, times = FALSE){
       res <- t(res)
 
       if(times){
-        if(class(grid) == 'RasterBrick'){
+        if(inherits(grid, 'RasterBrick')){
           zoo(res, getZ(grid))
         } else{
             return(res)

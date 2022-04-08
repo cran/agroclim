@@ -14,6 +14,7 @@
 #' @examples
 #'
 #' \donttest{
+#' try(
 #' createNc(arr = hi,
 #'           varunit = 'ºC',
 #'           varname = 'hi',
@@ -23,6 +24,7 @@
 #'           inidate = '1980-01-01',
 #'           scale = 'years',
 #'           out = 'hi.nc')
+#'  )
 #'  }
 #'
 #' @export

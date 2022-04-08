@@ -15,10 +15,12 @@
 #' @return A NetCDF file is created in the path specified in the "out" parameter.
 #' @examples
 #'\donttest{
+#'  try(
 #'  calcGrid(mxnc = NULL, mnnc = 'tmin.nc', varnametn = 'tn', fun = 'frostProb', 
 #'           inienddays = NULL, dates = dates, ncpu = 4,  
 #'           out = 'fd_prob.nc', iniday = '07-01', endday = '06-30', 
 #'           type = 'doy', thres = 0, prob = 0.10)
+#'  )
 #'}
 #' @import ncdf4
 #' @import multiApply
