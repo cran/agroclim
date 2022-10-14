@@ -60,7 +60,7 @@ frostFreqs <- function(mn, dates, thres = 0, out = NULL, iniday = '07-01', endda
   # frost probability, by month
   pf <- numeric()
   for(i in 1:12){
-    w <- which(as.numeric(as.character(time(x), format = '%m')) == i)
+    w <- which(as.numeric(format(time(x), '%m')) == i)
     ec <- ecdf(as.numeric(x[w]))
     pf[i] <- ec(thres)
   }

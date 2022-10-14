@@ -24,8 +24,8 @@
 frostDays <- function(mn, dates, iniday = '07-01', endday = '06-30', thres = 0) {
 
       x <- zoo(mn, dates)
-      wini <- which(as.character(time(x), format = '%m-%d') == iniday)
-      wend <- which(as.character(time(x), format = '%m-%d') == endday)
+      wini <- which(format(time(x), '%m-%d') == iniday)
+      wend <- which(format(time(x), '%m-%d') == endday)
       if(wend[1] < wini[1]){
         wend <- wend[2:length(wend)]
       }

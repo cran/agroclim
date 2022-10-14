@@ -23,14 +23,14 @@ ehe <- function(mx, dates, op = 'first'){
   ff <- function(xx, dd, op){
     if(is.na(sum(xx))) daythres <- NA else{
       xx <- zoo(xx, dd)
-      wini <- which(as.character(time(xx), format = '%d-%m') == '01-05')
-      wend <- which(as.character(time(xx), format = '%d-%m') == '31-07')
+      wini <- which(format(time(xx),'%d-%m') == '01-05')
+      wend <- which(format(time(xx),'%d-%m') == '31-07')
       f <- rle(as.numeric(xx)[wini:wend] > 35)
       w <- which(which(f$values) > 3)
       if(length(w) > 0){
         daythres <- numeric()
         for(i in 1:length(w)){
-          daythres[i] <- as.character(time(xx[wini:wend][sum(f$lengths[1:(w[i] - 1)])+1]), format = '%d-%m')
+          daythres[i] <- format(time(xx[wini:wend][sum(f$lengths[1:(w[i] - 1)])+1]), '%d-%m')
         }
       } else {daythres <- NULL}
     }

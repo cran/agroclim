@@ -28,7 +28,7 @@ tempProb <- function(mx, dates, thres = 20, month = NULL) {
     p <- round(pnorm(thres, mean(x), sd(x), lower.tail = FALSE), 2)
   } else if(as.numeric(month)){
     if(month >=1 & month <= 12){
-      w <- which(as.numeric(as.character(time(x), format = '%m')) == month)
+      w <- which(as.numeric(format(time(x), '%m')) == month)
       p <- round(pnorm(thres, mean(x[w]), sd(x[w]), lower.tail = FALSE), 2)
     } else{
       stop("'month' must be an integer between 1 and 12")

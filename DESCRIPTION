@@ -1,7 +1,7 @@
 Package: agroclim
 Type: Package
 Title: Climatic Indices for Agriculture
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
   c(person(given = "Roberto",
            family = "Serrano-Notivoli",
@@ -16,14 +16,13 @@ Depends: R (>= 3.5.0)
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
-Imports: stats, ggplot2, gtable, plyr, zoo, abind, raster, ggpubr,
-        cowplot, reshape, ggforce, ncdf4, easyNCDF, sp, multiApply,
-        tools
+RoxygenNote: 7.2.1
+Imports: stats, ggplot2, gtable, zoo, abind, raster, ggpubr, cowplot,
+        reshape, ggforce, ncdf4, easyNCDF, sp, multiApply, tools
 NeedsCompilation: no
-Packaged: 2022-04-06 15:24:14 UTC; rserrano
+Packaged: 2022-10-14 07:17:57 UTC; rserrano
 Author: Roberto Serrano-Notivoli [aut, cre]
     (<https://orcid.org/0000-0001-7663-1202>)
 Maintainer: Roberto Serrano-Notivoli <roberto.serrano@uam.es>
 Repository: CRAN
-Date/Publication: 2022-04-08 08:22:36 UTC
+Date/Publication: 2022-10-14 08:12:23 UTC

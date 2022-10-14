@@ -27,8 +27,8 @@
 firstTemp <- function(mx, dates, iniday = '01-01', endday = '09-01', type = 'doy', thres = 35) {
 
       x <- zoo(mx, dates)
-      wini <- which(as.character(time(x), format = '%m-%d') == iniday)
-      wend <- which(as.character(time(x), format = '%m-%d') == endday)
+      wini <- which(format(time(x), '%m-%d') == iniday)
+      wend <- which(format(time(x), '%m-%d') == endday)
       if(wend[1] < wini[1]){
         wend <- wend[2:length(wend)]
       }
